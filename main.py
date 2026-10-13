@@ -1,15 +1,19 @@
 from pyscript import document
 
-def checkNum(e):
+def checkMem(e):
 
-    num_bers = ["1", "8", "4", "6"]
+    mem_first = ["Zara", "Ysabel", "Cheree", "Therese"]
+    mem_last = ["LLAGUNO", "VALERO", "MENDOZA", "REYES"]
+    
 
-    num1= document.getElementById("num1").value
-    name= "zara"
+    memf= document.getElementById("memf").value
+    meml= document.getElementById("meml").value
+    name= "Zara"
 
-    confirm_num = num1 in num_bers
+    confirm_mem = memf in mem_first
+    confirm_mem = meml in mem_last
 
-    message = (f'Sorry{name}, your number is not found.', f'Congratulations! {name}, your number is found.')
+    message = (f'Sorry {name}, this member is not in the club.', f'Congratulations {name}!, this member is in the club.')
 
-    document.getElementById("output1").innerHTML = message[confirm_num]
+    document.getElementById("output1").innerHTML = message[confirm_mem]
 
